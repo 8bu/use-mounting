@@ -1,6 +1,4 @@
 import type {
-  VNode,
-  VNodeArrayChildren,
   VNodeProps,
   defineComponent,
 } from 'vue'
@@ -8,11 +6,14 @@ import type {
 export type Component = ReturnType<typeof defineComponent>
 
 export type DestroyFn = () => void
-export type MountFn = (config: {
+export interface MountFnConfig {
   el: Component
   props?: VNodeProps & Record<string, any>
-  children?: VNode | VNodeArrayChildren
-}) => DestroyFn
+  elContent?: ChildFnConfig[]
+  parent?: Component
+}
+export type ChildFnConfig = Exclude<MountFnConfig, 'parent'>
+export type MountFn = (config: MountFnConfig) => DestroyFn
 
 export interface MountInstance {
   mount: MountFn
