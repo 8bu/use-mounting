@@ -31,10 +31,10 @@ yarn add @8bu/use-mounting
 ### Config `main.ts`
 
 ```typescript
-import { MountingModule } from '@8bu/use-mounting'
+import { MountingPlugin } from '@8bu/use-mounting'
 
 // provide mounting instance to lower level components
-app.use(MountingModule());
+app.use(MountingPlugin());
 ```
 
 ## Quick start
