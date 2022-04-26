@@ -1,6 +1,19 @@
 # @8bu/use-mounting
 
-[![NPM version](https://img.shields.io/npm/v/@8bu/use-mounting?color=a1b858&label=)](https://www.npmjs.com/package/@8bu/use-mounting)
+Programmatic mount your Vue component
+
+[![npm version](https://img.shields.io/npm/v/@8bu/use-mounting?style=for-the-badge)](https://www.npmjs.com/package/@8bu/use-mounting)
+[![npm license](https://img.shields.io/npm/l/@8bu/use-mounting?style=for-the-badge)](https://github.com/8bu/@8bu/use-mounting/blob/main/LICENSE)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@8bu/use-mounting?style=for-the-badge)](https://bundlephobia.com/result?p=@8bu/use-mounting)
+[![npm](https://img.shields.io/npm/dm/@8bu/use-mounting?style=for-the-badge)](https://www.npmjs.com/package/@8bu/use-mounting)
+
+## Background
+
+I want to clone the programmatic modal of Buefy. So I created this thing.
+You can use it in the same situation like programmatic modal of Buefy does:
+
+- Open your modal/dialog by function, with custom template/component 
+- Push new notification/snackbar by function, with custom template
 
 ## Usage
 
