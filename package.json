@@ -1,6 +1,6 @@
 {
   "name": "@8bu/use-mounting",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@6.32.3",
   "description": "Programmatic mount your Vue components",
   "keywords": [
