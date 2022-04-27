@@ -4,7 +4,7 @@ export default defineComponent({
   props: {
     msg: {
       type: String,
-      required: true,
+      default: 'Hello world'
     },
   },
 })
@@ -16,5 +16,8 @@ export default defineComponent({
     <p>
       {{ msg }}
     </p>
+    <button border rounded py-1 text-sm px-4 my-4 @click="$emit('hehe')">
+      Test
+    </button>
   </div>
 </template>

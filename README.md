@@ -12,7 +12,7 @@ Programmatic mount your Vue component
 I want to clone the programmatic modal of Buefy. So I created this thing.
 You can use it in the same situation like programmatic modal of Buefy does:
 
-- Open your modal/dialog by function, with custom template/component 
+- Open your modal/dialog by function, with custom template/component
 - Push new notification/snackbar by function, with custom template
 
 ## Usage
@@ -181,7 +181,7 @@ __Config object cheatsheet__
 | el         | Component that you want to mount                 | Vue Component    | Yes       | -                     |
 | props      | Passing props to `el` component                  | Object           | No        | -                     |
 | parent     | Place to mount your component                    | Ref Element      | No        | Root container (App)  |
-| elContent  | Array - Same as hook config, but without parent  | ChildFnConfig[]  | No        | -                     |
+| elContent  | Array - Same as hook config, but without parent  | MountFnConfig[]  | No        | -                     |
 
 ## License
 

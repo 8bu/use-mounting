@@ -1,4 +1,5 @@
 import type {
+  Ref,
   VNodeProps,
   defineComponent,
 } from 'vue'
@@ -8,7 +9,7 @@ export type Component = ReturnType<typeof defineComponent>
 export type DestroyFn = () => void
 export interface MountFnConfig {
   el: Component
-  props?: VNodeProps & Record<string, any>
+  props?: Ref<VNodeProps & Record<string, any>>
   elContent?: ChildFnConfig[]
   parent?: Component
 }

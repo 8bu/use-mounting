@@ -10,21 +10,26 @@ let destroyComp = null
 
 onUnmounted(() => destroyComp?.())
 
-const insert = async() => {
+const outerProps = computed(() => ({
+  msg: `Message ${counter.value}`,
+}))
+
+const insert = async () => {
   destroyComp?.()
   destroyComp = mount({
     el: (await import('~/components/Hehe.vue')).default,
-    props: {
-      key: counter,
-      msg: `Message ${counter.value++}`,
-    },
+    props: outerProps,
     parent: programmatic.value,
     elContent: [
       {
         el: (await import('~/components/Hihi.vue')).default,
         props: {
-          key: counter,
-          msg: `Message ${counter.value + 50}`,
+          // msg: `Message ${counter.value + 50}`,
+          onHehe: () => {
+            console.log('onHehe')
+            counter.value = counter.value + 5
+            // destroyComp?.()
+          },
         },
       },
     ],
@@ -38,6 +43,9 @@ const insert = async() => {
         ref="programmatic"
       </span>
     </div>
+    <p>
+      Counter: {{ counter }}
+    </p>
     <button class="rounded-lg px-4 py-1 bg-white text-blue-400" @click="insert">
       Insert component
     </button>
