@@ -167,7 +167,7 @@ __The interface__
 ```ts
 interface MountFnConfig {
   el: Component
-  props?: VNodeProps & Record<string, any>
+  props?: (VNodeProps & Record<string, any>) | Ref<VNodeProps & Record<string, any>>
   elContent?: ChildFnConfig[]
   parent?: Component
 }
@@ -176,12 +176,12 @@ export type ChildFnConfig = Exclude<MountFnConfig, 'parent'>
 
 __Config object cheatsheet__
 
-| Key        | Description                                      | Type             | Required  | Default value         |
-|----------- |------------------------------------------------- |----------------- |---------- |---------------------- |
-| el         | Component that you want to mount                 | Vue Component    | Yes       | -                     |
-| props      | Passing props to `el` component                  | Object           | No        | -                     |
-| parent     | Place to mount your component                    | Ref Element      | No        | Root container (App)  |
-| elContent  | Array - Same as hook config, but without parent  | MountFnConfig[]  | No        | -                     |
+| Key        | Description                                                               | Type             | Required  | Default value         |
+|----------- |-------------------------------------------------------------------------- |----------------- |---------- |---------------------- |
+| el         | Component that you want to mount                                          | Vue Component    | Yes       | -                     |
+| props      | Passing props to `el` component, use ref() if your props is gonna change  | Object \| Ref    | No        | -                     |
+| parent     | Place to mount your component                                             | Template Ref     | No        | Root container (App)  |
+| elContent  | Array - Same as hook config, but without parent                           | MountFnConfig[]  | No        | -                     |
 
 ## License
 
