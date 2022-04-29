@@ -37,6 +37,10 @@ import { MountingPlugin } from '@8bu/use-mounting'
 app.use(MountingPlugin());
 ```
 
+### Limitation
+
+- Reactive props can be only used inside SFC, I'm trying to resolve it.
+
 ## Quick start
 
 `Hehe.vue`
